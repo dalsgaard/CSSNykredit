@@ -124,7 +124,7 @@ p[class="foo"] {
 
 ### Partial Attribute Value Selector
 
-Any *item* in a space separated list.
+Attribute value in a space separated list.
 
 ```css
 p[class~="foo"] {
@@ -134,6 +134,8 @@ p[class~="foo"] {
 
 ### Beginning Substring Attribute Value Selector
 
+Attribute value starting with.
+
 ```css
 a[href^="http:"] {
   background-color: green;
@@ -142,6 +144,8 @@ a[href^="http:"] {
 
 ### Ending Substring Attribute Value Selector
 
+Attribute value ending with.
+
 ```css
 a[href$=".pdf"] {
   background-color: green;
@@ -149,6 +153,8 @@ a[href$=".pdf"] {
 ```
 
 ### Arbitrary Substring Attribute Value Selector
+
+Attribute value containing.
 
 ```css
 a[href*="/foo/"] {
@@ -218,6 +224,8 @@ p:last-child {
 
 ### :first-of-type
 
+An element that is the first child of a given type of it's parent element.
+
 ```css
 p:first-of-type {
   background-color: red;
@@ -232,6 +240,8 @@ p:first-of-type {
 
 ### :last-of-type
 
+An element that is the first child of a given type of it's parent element.
+
 ```css
 p:last-of-type {
   background-color: red;
@@ -245,6 +255,8 @@ p:last-of-type {
 ```
 
 ### :nth-child
+
+An element that is the n'_th_ child of it's parent element.
 
 Children are one-based and *n* is zero-based.
 
@@ -274,6 +286,8 @@ p:nth-child(3n-1) {
 
 ### :nth-last-child
 
+An element that is the n'_th_ last child of it's parent element.
+
 Children are one-based and *n* is zero-based.
 
 ```css
@@ -301,6 +315,8 @@ p:nth-last-child(3n-1) {
 ```
 
 ### :nth-of-type
+
+An element that is the n'_th_ child of a given type of it's parent element.
 
 Elements of type are one-based and *n* is zero-based.
 
@@ -330,6 +346,8 @@ p:nth-of-type(3n-1) {
 
 ### :nth-last-of-type
 
+An element that is the n'_th_ last child of a given type of it's parent element.
+
 Elements of type are one-based and *n* is zero-based.
 
 ```css
@@ -358,6 +376,8 @@ p:nth-last-of-type(3n-1) {
 
 ### :only-child
 
+An element that is the only child of it's parent element.
+
 ```css
 p:only-child {
   background-color: red;
@@ -371,6 +391,8 @@ p:only-child {
 ```
 
 ### :only-of-type
+
+An element that is the only child of a given type of it's parent element.
 
 ```css
 p:only-of-type {
@@ -601,5 +623,47 @@ div:target {
 ```css
 *:target {
   background-color: lightgreen;
+}
+```
+
+## Pseudo-Element Selectors
+
+### ::first-line
+
+The first line of a elements text.
+
+```css
+p::first-line {
+  font-variant: small-caps;
+}
+```
+
+### ::first-letter
+
+The first letter of a elements text.
+
+```css
+p::first-letter {
+  font-size: 2em;
+}
+```
+
+### ::before
+
+A pseudo-element containing generated content placed before the content in the element.
+
+```css
+span::before {
+  content: '$';
+}
+```
+
+### ::after
+
+A pseudo-element containing generated content placed after the content in the element.
+
+```css
+span::after {
+  content: '™';
 }
 ```
